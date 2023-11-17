@@ -90,7 +90,7 @@ export const trpcInstaller: Installer = ({
     const trpcDir = path.join(extrasDir, "src/trpc");
     copySrcDest.push(
       [
-        path.join(trpcDir, "server.ts"),
+        path.join(trpcDir, usingAuth ? "server-async.ts" : "server.ts"),
         path.join(projectDir, "src/trpc/server.ts"),
       ],
       [
