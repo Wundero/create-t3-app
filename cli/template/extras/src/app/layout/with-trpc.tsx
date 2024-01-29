@@ -1,10 +1,10 @@
 import "~/styles/globals.css";
 
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
 
-const inter = Inter({
+const geist = GeistSans({
   subsets: ["latin"],
 });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={geist.className}>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
